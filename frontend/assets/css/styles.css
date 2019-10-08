@@ -1,3 +1,9 @@
+/* Tag selectors */
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
 /*Colors used for the site*/
 .dark-primary-color    { background: #455A64; }
 .default-primary-color { background: #607D8B; }

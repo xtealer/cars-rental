@@ -9,6 +9,7 @@ body, html {
 .default-primary-color { background: #607D8B; }
 .bg-1 { background-color: #448AFF }
 .bg-2 { background-color: #CFD8DC; }
+.bg-3 { background-color: #000000;}
 .tc-1 { color: #FFFFFF; }
 .tc-2 { color: #212121; }
 .secondary-text-color  { color: #757575; }

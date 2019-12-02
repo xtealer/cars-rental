@@ -1,101 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cotizaciones</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cotizaciones</title>
+  <link rel="stylesheet" href="https://rapid-cars.cf/assets/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+    body {
+      margin-left: auto;
+      margin-right: auto
+    }
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-1">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand">Cars Rental</a>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Pagina Principal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./catalogo.html">Catalogo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./sucursarles.html">Sucursales</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./terminos-condiciones.html">Terminos y Condiciones</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container-fluid bg-light h-100">
-      <div class="py-4"></div>
-      <h1 class="text-center text-info">Formulario de Cotizaciones</h1>
-      <div class="py-3"></div>
-      <form class="text-dark bg-light text-center" action="index.html" method="post">
-        <div class="pt-3"></div>
-        <div class="row-auto bg-white">
-          <label class="text-left" for="autosDisponibles">Auto:</label>
-          <select style="width: 250px; border: solid 1px" id="autosDisponibles">
+    div.form-group {
+      background: white;
+      margin-left: auto;
+      margin-right: auto
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-1">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand">Car Rental</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Pagina Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./catalogo.html">Catalogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./sucursarles.html">Sucursales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./preguntas-frecuentes.html">Preguntas Frecuentes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./terminos-condiciones.html">Terminos y Condiciones</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="py-4"></div>
+    <h1 class="text-center text-info">Formulario de Cotizaciones</h1>
+    <div class="py-3"></div>
+    <form class="form-horizontal text-dark bg-light" action="http://localhost:8080/cotizar" method="post">
+      <div class="pt-3"></div>
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="carModel">Autos:</label>
+        <div class="col-sm-4">
+          <select class="form-control" style="border: solid 1px" name="carModel" required>
+            <option>Elige un auto</option>
             <option>Toyota Hilux</option>
             <option>Nissan np300-l</option>
-            <option>Hyundai Sedan 2019</option>
+            <option>Hyundai Elantra</option>
             <option>Kia Picanto</option>
+            <option>Hyundai Accent</option>
+            <option>Toyota Hiace </option>
+            <option>Hyundai Tucson</option>
+            <option>Nissan X-Trail</option>
+            <option>Nissan Urvan 2018</option>
+            <option>Toyota Rav 4</option>
+            <option>Hyundai H1</option>
+            <option>Chevrolet AVEO 2019</option>
           </select>
         </div>
-        <div class="row-auto bg-white">
-          <label class="text-left" for="name">Nombre:</label>
-          <input style="border: solid 1px" type="text" id="name" />
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="name">Nombre:</label>
+        <div class="col-sm-4">
+          <input class="form-control" style="border: solid 1px" type="text" name="name" placeholder="Name" required>
         </div>
+      </div>
 
-        <div class="row-auto bg-white">
-          <label class="text-left" for="ape">Apellido:</label>
-          <input style="border: solid 1px" type="text" id="ape" />
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="lastName">Apellido:</label>
+        <div class="col-sm-4">
+          <input class="form-control" style="border: solid 1px" type="text" name="lastName" placeholder="lastName" required>
         </div>
+      </div>
 
-        <div class="row-auto bg-white">
-          <label class="text-left" for="ced">Cédula:</label>
-          <input style="border: solid 1px" type="text" id="ced" />
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="id">Cédula:</label>
+        <div class="col-sm-4">
+          <input class="form-control" style="border: solid 1px" type="text" name="id" placeholder="ID" required>
         </div>
+      </div>
 
-        <div class="row-auto bg-white">
-          <label class="text-left" for="fecha">Fecha de Nacimiento:</label>
-          <input style="border: solid 1px" type="date" id="fecha" />
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="birthdate">Fecha de Nacimiento:</label>
+        <div class="col-sm-4">
+          <input class="form-control" style="border: solid 1px" type="date" name="birthdate" required>
         </div>
+      </div>
 
-        <div class="row-auto bg-white">
-          <label class="text-left" for="cell">Celular:</label>
-          <input style="border: solid 1px" type="text" id="cell" />
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="cellphone">Celular:</label>
+        <div class="col-sm-4">
+          <input class="form-control" style="border: solid 1px" type="text" name="cellphone" placeholder="Mobil" required>
         </div>
+      </div>
 
-        <div class="row-auto bg-white">
-          <label class="text-left" for="mail">E-mail:</label>
-          <input style="border: solid 1px" type="email" id="mail" />
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="email">E-mail:</label>
+        <div class="col-sm-4">
+          <input class="form-control" style="border: solid 1px" type="email" name="email" placeholder="Enter E-mail"
+            required>
         </div>
+      </div>
 
-        <div class="row-auto bg-white">
-          <label class="text-left" for="msg">Comentarios Adicionales:</label>
-          <textarea style="border: solid 1px" id="msg"></textarea>
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="deliveryDate">Fecha de Retiro:</label>
+        <div class="col-sm-4">
+          <input class="form-control" style="border: solid 1px" type="date" name="deliveryDate" required>
         </div>
-        <div class="pb-3"></div>
-        <div class="row-auto">
-          <a class="btn btn-default btn-info text-light" type="submit" href="index.html">Alquilar Auto</a>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-4 col-form-label" for="entryDate">Fecha de Entrega:</label>
+        <div class="col-sm-4">
+          <input class="form-control" style="border: solid 1px" type="date" name="entryDate" required>
         </div>
-        <div class="pb-3"></div>
-      </form>
-      <div class="pb-4"></div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+      </div>
+
+      <div class="pb-3"></div>
+      <div class="col-sm-10 text-center">
+        <button class="btn btn-primary" type="submit">Alquilar Auto</button>
+      </div>
+      <div class="pb-3"></div>
+    </form>
+    <div class="pb-4"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
 
 </html>
